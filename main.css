@@ -1,0 +1,379 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+.name{
+    
+    font-weight: bolder;
+    font-style: normal;
+}
+/*Contenedor del body 
+Contenedor Oculto por defecto*/
+.container{
+    visibility: hidden;
+}
+/* Contenedor se hace visible 
+despues del preloader(Carga de la pagina)
+*/
+.container.visible{
+    visibility: visible;
+}
+/*Footer oculto por defecto , se hace 
+visible despues del preloader(carga de la pagina)*/
+footer.visible{
+    visibility: visible;
+}
+
+/*Preloader (Anicmación de carga)*/
+.preloader{
+    
+
+    align-items: center;
+    justify-content: center;
+    padding: 400px;
+}
+/*Preloader se oculta tras la carga*/
+.preloader.oculto{
+    visibility: hidden;
+    padding: 0;
+}
+
+/*Cuerpo de la pagina ,se cambia la fuente*/
+body{
+    font-family: 'Oswald', sans-serif;
+}
+/*Enlace seleccionado en el barra de navegación*/
+.selected{
+    color: red;
+    font-weight: bolder;
+    
+
+}
+/*Barra de navegación
+La disponemos de forma horizontal con flex
+*/
+nav{
+    display: flex;
+    font-size: 17px;
+    
+}
+/*Lista
+Disponemos la lista en la barra de navegación
+de forma horizontal , quitamos el estilo de lista,
+centramos horizontal y verticalmente la lista
+*/
+nav ul{
+    
+    width: 70%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}  
+/*Elementos de la Lista*/
+nav ul li{
+    padding: 20px;
+ 
+}
+/*Linea de separacion*/
+hr{
+    border: solid black 1px;
+}
+/*Contenido del Medio-Posterior a Nav*/
+.middle-content{
+    display: flex;
+    margin-bottom : 40px;
+    margin-top: 40px;
+    height: 400px ;
+    
+   
+}
+/*Presentación -Nombre Imagen*/
+.presentation{
+    
+    display: flex;
+    align-items: center;
+    width: 60%;
+    border-right: solid black 1px;
+  
+}
+/*Imagen*/
+.image{
+    width: 40%;
+}
+/*Config de la imagen*/
+.image img{
+    width: 100%;
+    height: 100%;
+    background: no-repeat center center/cover;
+}
+
+/*Enlaces */
+a{
+    color: black;
+}
+/*Animacion del paso del mouse en la barra de
+navegacion */
+ul a:hover{
+    text-decoration: none;
+    border-bottom: 2px solid rgb(177, 49, 49);
+    color: rgb(177, 49, 49);
+    font-weight: bolder;
+}
+/*Botones Ver Mas*/
+.btn-mas{
+    border: black solid;
+    background: black;
+    color: white;
+    padding: 5px;
+}
+.btn-mas-popup{
+    border: black solid;
+    background: black;
+    color: white;
+    padding: 5px;
+    font-size: small;
+}
+.btn-mas-popup:hover{
+
+    text-decoration: none;
+    color: rgb(177, 49, 49);
+    background: whitesmoke;
+    padding: 9px;
+
+}
+.btn-mas:hover{
+
+    text-decoration: none;
+    color: rgb(177, 49, 49);
+    background: whitesmoke;
+    padding: 9px;
+
+}
+
+/*Conocimientos*/
+.knowledge{
+    margin-bottom: 40px;
+    background: black;
+    color: white;
+    padding: 60px;
+    border: brown solid;
+}
+
+/*Proyectos - Tarjetas*/
+
+.proyects{
+    margin-top: 40px;
+
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    
+}
+/*Proyecto Individuales*/
+.proyect{
+    padding: 15px;
+    border: solid black 3px;
+
+}
+.proyects button{
+    align-items: center;
+}
+/*
+footer{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    background: black;
+    color: white;
+}*/
+.copyright{
+    font-size: 12px;
+    padding-left:30px;
+    padding-bottom:10px;
+}
+/*Pie de pagina*/
+footer{
+    background: black;
+    color: white;
+    display: block;
+    margin-top: 40px;
+    visibility: hidden;
+    
+}
+.footer-container{
+    color: white;
+    display: flex;
+    gap: 300px;
+    padding: 60px;
+}
+.footer-container ul{
+    list-style: none;
+}
+.footer-container ul li{
+    line-height: 2.8;
+    font-size: 14px;
+    color: white;
+}
+footer a {
+    color: white;
+}
+
+/*POP UP PROYECTOS*/
+
+.overlay-proyects   {
+    background: rgba(0,0,0,.0);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    visibility: hidden;
+   
+}
+.overlay-proyects.active{
+    visibility: visible;
+}
+.popup{
+    background: white;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, .3);
+    padding: 40px;
+    border-radius: 5px;
+    text-align: center;
+    width: 40%;
+    padding: 10px;
+    justify-content: center;
+}
+.popup .btn-close-popup{
+
+    font-size: 16px;
+    line-height: 16px;
+    display: block;
+    text-align: right;
+    color: black;
+    transition: .1s all;
+}
+.popup .btn-close-popup:hover{
+    color: red;
+}
+
+/*Formulario*/
+.middle{
+    
+    align-items: center;
+    justify-self: center;
+
+}
+.form{
+    width: 50%;
+
+}
+
+
+/*Responsividad a dispositivos */
+@media screen and (max-width:700px) {
+  
+    .preloader{
+    
+    
+        align-items: center;
+        justify-content: center;
+        padding: 120px;
+    }
+    .container{
+        border-top: 0;
+        width: 100%;
+    }
+
+    nav{
+        display: grid;
+        font-size: 17px;
+        grid-template-columns: repeat(2,1fr);
+      
+       
+        
+    }
+    nav ul{
+        display: grid;
+        font-size: 17px;
+        grid-template-columns: repeat(1,1fr);
+        width: 100%
+        
+    }
+    nav ul li{
+        padding: 10px;
+     
+    }
+    .proyects{
+        margin-top: 40px;
+        border: solid black;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        
+    }
+    .footer-container{
+        color: white;
+        display: flex;
+        gap: 80px;
+        padding: 60px;
+    }
+    .form{
+      width: 100%; 
+    }
+  
+}
+@media screen and (max-width:200px) {
+  
+    .preloader{
+    
+    
+        align-items: center;
+        justify-content: center;
+        padding: 120px;
+    }
+    .container{
+        border-top: 0;
+        width: 100%;
+    }
+
+    nav{
+        display: grid;
+        font-size: 17px;
+        grid-template-columns: repeat(2,1fr);
+      
+       
+        
+    }
+    nav ul{
+        display: grid;
+        font-size: 17px;
+        grid-template-columns: repeat(1,1fr);
+        width: 100%
+        
+    }
+    nav ul li{
+        padding: 10px;
+     
+    }
+    .proyects{
+        margin-top: 40px;
+        border: solid black;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        
+    }
+    .footer-container{
+        color: white;
+        display: flex;
+        gap: 80px;
+        padding: 60px;
+    }
+    .form{
+      width: 100%; 
+    }
+  
+}
